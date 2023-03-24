@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Events</title>
+        <meta name = "viewport" content = "width=device-width , initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <div class="sidebar visible">
+            <div class="background"></div>
+            <div class="event">
+                <span>+ New Event</span>
+                <form class="event-details show">
+                    <span>Event Name:</span>
+                    <div class="name">
+                        <input type="text">
+                    </div>
+                    <div class="time">
+                        <span class="icon">Time</span>
+                        <input type = "time">
+                        <span>to</span>
+                        <input type = "time">
+                    </div>
+                    <div class="location">
+                        <input type="text" placeholder = "location">
+                    </div>
+                    <div class="description">
+                        <input type="text">
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <div class="current-date">October 2022</div>
+                <div class = "icons">
+                    <span id = "prev" class="material-symbols-rounded">chevron_left</span>
+                    <span id = "next" class="material-symbols-rounded">chevron_right</span>
+                </div>
+            </div>
+            <div class="weeks">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tues</div>
+                <div>Wed</div>
+                <div>Thurs</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar"></div>
+        </div>
+    </body>
+    <script src = "script.js"></script>
+</html>

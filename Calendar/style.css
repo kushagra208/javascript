@@ -17,7 +17,8 @@ body{
 
 .wrapper{
     /* display:flex; */
-    width:450px;
+    height: 480px;
+    width: 480px;
     background:white;
     border-radius: 10px;
 

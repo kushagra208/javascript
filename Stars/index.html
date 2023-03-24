@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "description" content = "width=device-width , initial-scale=1.0">
+        <link rel = "stylesheet" href = "styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js" integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            if(dat != null) {
+              alert("dat is working!");
+              var gui = new dat.GUI(); 
+              if(gui != null) {
+                    alert("gui is working too!");
+              }
+            }
+          </script>
+    </head>
+    <body>
+        <div class="landscape"></div>
+        <div class="filter"></div>
+        <canvas id = "canvas"></canvas>
+        <script src = "script.js"></script>
+    </body>
+</html>

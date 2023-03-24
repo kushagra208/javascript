@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: url('Assets/mountains.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sidebar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 19vw;
+    color: white;
+}
+.background{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 19vw;
+    height: 100vh;
+    z-index: -1;
+}
+.background:before {
+    position: absolute;
+    content: '';
+    background: inherit;
+    height: 100vh;
+    width: 19vw;
+    background-color: rgba(255, 255, 255, 0);
+    /* box-shadow: inset 0 0 0 3000px rgba(150, 150, 150 , 0); */
+    backdrop-filter: blur(5px);
+}
+
+.event{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.event-details{
+    opacity: 0;
+    /* transition: ; */
+}
+.event-details.show{
+    opacity: 1;
+    width: 19vw;
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.name , .time , .location , .description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.name input, .location input, .description input{
+    height: 35px;
+    width: 80%;
+    background: rgb(67, 67, 67);
+    border: none;
+    color: white;
+    margin: 10px 0px 0px;
+    border-radius:5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.time input{
+    height: 35px;
+    background: rgb(67, 67, 67);
+    border: none;
+    color: white;
+    margin: 10px 0px 0px;
+    border-radius:5px;
+    padding: 10px;
+}
+
+.submit button{
+    width: 10vw;
+    padding: 10px;
+    background: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+
+}
+
+.wrapper{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background:black;
+    overflow: hidden;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 10px;
+    font-size: 2rem;
+    color:silver;
+}
+
+.icons span{
+    color:rgb(28, 28, 103)
+}
+
+.calendar{
+    padding: 10px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(7 , auto);
+    height:75vh;
+}
+.weeks{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    color:white;
+}
+.weeks div{
+    width: calc(100%/7);
+    padding: 15px;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.days{
+    /* height: 12vh; */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding:20px;
+    font-size: 1.2rem;
+    z-index:0;
+    transform:scale(1);
+    /* background: linear-gradient(to bottom right , black , silver) */
+}
+
+.days.active{
+    border-top: 1px solid rgb(28, 28, 103);
+    color: rgb(28, 28, 103);
+}
+
+.days.inactive{
+    color:gray;
+}
+
+.days:hover{
+    transform: scale(1.2);
+    border:1px solid silver;
+    background:black;
+    z-index: 10;
+    overflow:hidden;
+}
